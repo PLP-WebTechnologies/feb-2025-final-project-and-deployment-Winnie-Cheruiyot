@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/animation.css">
+  <style>
+    .cart-container {
+      max-width: 800px;
+      margin: 2rem auto;
+    }
+    .cart-item {
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 0;
+      display: flex;
+      justify-content: space-between;
+    }
+    .total {
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-align: right;
+      margin-top: 1rem;
+    }
+    .btn-checkout {
+      margin-top: 2rem;
+      display: block;
+      background-color: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+  </style>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const container = document.getElementById("cart-items");
+      const totalDisplay = document.getElementById("total");
+
+      let total = 0;
+      if (cart.length === 0) {
+        container.innerHTML = "<p>Your cart is empty.</p>";
+        return;
+      }
+
+      cart.forEach((item) => {
+        const itemEl = document.createElement("div");
+        itemEl.className = "cart-item";
+        itemEl.innerHTML = `
+          <span>${item.name}</span>
+          <span>$${item.price.toFixed(2)}</span>
+        `;
+        total += item.price;
+        container.appendChild(itemEl);
+      });
+
+      totalDisplay.textContent = `Total: $${total.toFixed(2)}`;
+    });
+  </script>
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <h1><a href="index.html">🌿 ELSE Organics</a></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="cart-container">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <div id="total" class="total"></div>
+    <a href="checkout.html" class="btn-checkout">Proceed to Checkout</a>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2025 ELSE Organics. All rights reserved.</p>
+    </div>
+  </footer>
+    <script src="../javascript/script.js"></script>
+    <script src="../javascript/cart.js"></script>
+    <script src="../javascript/products.js"></script>
+</body>
+</html>
+

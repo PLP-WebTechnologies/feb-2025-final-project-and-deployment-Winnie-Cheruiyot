@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Products</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/product.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/animation.css">
+  <script defer>
+    const products = [
+      {
+        id: "bananas",
+        name: "Organic Bananas",
+        image: "../images/ndizi.jpeg",
+        description: "Naturally ripened, sweet organic bananas.",
+        price: 12.00
+      },
+      {
+        id: "avocados",
+        name: "Organic Avocados",
+        image: "../images/avocados.jpeg",
+        description: "Creamy and nutrient-rich organic avocados.",
+        price: 15.00
+      },
+      {
+        id: "spinach",
+        name: "Organic Spinach",
+        image: "../images/spinach.jpeg",
+        description: "Fresh, iron-rich organic spinach leaves.",
+        price: 9.50
+      },
+      {
+        id: "carrots",
+        name: "Organic Carrots",
+        image: "../images/carrots.jpeg",
+        description: "Crunchy, naturally sweet organic carrots.",
+        price: 8.00
+      },
+      {
+        id: "apples",
+        name: "Organic Apples",
+        image: "../images/apples.jpeg",
+        description: "Juicy and crisp organic apples.",
+        price: 10.00
+      },
+      {
+        id: "lemons",
+        name: "Organic Lemons",
+        image: "../images/lemons.jpeg",
+        description: "Tangy and fresh organic lemons.",
+        price: 6.00
+      },
+      {
+        id: "oranges",
+        name: "Organic Oranges",
+        image: "../images/oranges.jpeg",
+        description: "Sweet and citrusy organic oranges.",
+        price: 11.50
+      },
+      {
+        id: "potatoes",
+        name: "Organic Potatoes",
+        image: "../images/potatoes.jpeg",
+        description: "Hearty, starchy organic potatoes.",
+        price: 7.75
+      },
+      {
+        id: "tomatoes",
+        name: "Organic Tomatoes",
+        image: "../images/tomatoes.jpeg",
+        description: "Ripe and juicy organic tomatoes.",
+        price: 9.25
+      },
+      {
+        id: "cucumbers",
+        name: "Organic Cucumbers",
+        image: "../images/cucumbers.jpeg",
+        description: "Cool and refreshing organic cucumbers.",
+        price: 6.90
+      }
+    ];
+
+    function loadProducts() {
+      const container = document.getElementById("product-list");
+      products.forEach(product => {
+        const card = document.createElement("div");
+        card.className = "product-card";
+        card.innerHTML = `
+          <img src="${product.image}" alt="${product.name}">
+          <h3>${product.name}</h3>
+          <p>${product.description}</p>
+          <p class="price">$${product.price.toFixed(2)}</p>
+          <button onclick="viewProduct('${product.id}')">View Details</button>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function viewProduct(productId) {
+      const selected = products.find(p => p.id === productId);
+      sessionStorage.setItem("selectedProduct", JSON.stringify(selected));
+      window.location.href = "product-detail.html";
+    }
+
+    window.addEventListener("DOMContentLoaded", loadProducts);
+  </script>
+  <style>
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .product-card {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .product-card .price {
+      font-weight: bold;
+      color: green;
+    }
+    .product-card button {
+      margin-top: 10px;
+      padding: 0.5rem 1rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .product-card button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <h1><a href="index.html">🌿 ELSE Organics</a></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="product-template.html" class="active">Product</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>Our Organic Products</h2>
+      <div id="product-list" class="product-list"></div>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2025 ELSE Organics. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="../javascript/script.js"></script>
+  <script src="../javascript/products.js"></script>
+</body>
+</html>
+

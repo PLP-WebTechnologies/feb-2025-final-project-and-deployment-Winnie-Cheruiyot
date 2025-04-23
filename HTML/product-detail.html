@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Detail</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/product.css">
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      const product = JSON.parse(sessionStorage.getItem("selectedProduct"));
+      const container = document.getElementById("product-detail");
+
+      if (!product) {
+        container.innerHTML = "<p>Product not found. Please go back and select a product.</p>";
+        return;
+      }
+
+      container.innerHTML = `
+        <div class="product-box">
+          <img src="${product.image}" alt="${product.name}" class="product-image">
+          <div class="product-info">
+            <h2>${product.name}</h2>
+            <p>${product.description}</p>
+            <p class="price">$${product.price.toFixed(2)}</p>
+         <button class="btn" onclick="addToCart('${product.name}', ${product.price})">Add to Cart</button>
+  
+          </div>
+        </div>
+      `;
+    });
+
+    function addToCart(name, price) {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push({ name, price });
+  localStorage.setItem("cart", JSON.stringify(cart));
+  window.location.href = "cart.html"; // Redirects to the cart page
+}
+
+  </script>
+  <style>
+    .product-box {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .product-image {
+      width: 300px;
+      border-radius: 10px;
+    }
+    .product-info {
+      max-width: 600px;
+    }
+    .price {
+      font-size: 1.5rem;
+      color: green;
+      margin: 1rem 0;
+    }
+    .btn {
+      padding: 0.5rem 1.5rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <h1><a href="index.html">🌿 ELSE Organics</a></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+            <li><a href="product-template.html">Product</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Product Detail</h2>
+    <div id="product-detail"></div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2025 ELSE Organics. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="../javascript/script.js"></script>
+  <script src="../javascript/products.js"></script>
+  <script src="../javascript/product-data.js"></script>
+  <script src="../javascript/product-template.js"></script>
+
+</body>
+</html>
+

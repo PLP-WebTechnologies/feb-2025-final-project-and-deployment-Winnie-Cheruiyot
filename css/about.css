@@ -1,0 +1,67 @@
+/* About Us Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #2c3e50;
+    padding: 20px;
+    color: white;
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  header nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  main {
+    padding: 40px 10%;
+  }
+  
+  .about-us, .our-values, .our-story, .contact-info {
+    margin-bottom: 40px;
+  }
+  
+  .about-us h2, .our-values h2, .our-story h2, .contact-info h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+  }
+  
+  .about-us p, .our-values ul, .our-story p, .contact-info ul {
+    font-size: 1rem;
+    color: #7f8c8d;
+  }
+  
+  .our-values ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .contact-info ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  footer {
+    background-color: #2c3e50;
+    padding: 20px;
+    color: white;
+    text-align: center;
+  }
+  

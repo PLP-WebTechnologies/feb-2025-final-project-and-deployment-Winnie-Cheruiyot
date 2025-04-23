@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Organic Shop | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../css/styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/layout.css">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+  <!-- 🔝 Top Bar -->
+  <div class="bg-light py-2 border-bottom">
+    <div class="container d-flex justify-content-between small">
+      <div>
+        <span class="me-3"><i class="fa-regular fa-envelope"></i> elseorganics@gmail.com</span>
+        <span>Free Shipping for All Orders $199+</span>
+      </div>
+      <div class="social-links">
+        <a href="https://facebook.com/yourpage" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="text-end">
+        <a href="login.html" class="text-decoration-none text-dark me-3"><i class="fa-solid fa-user"></i> Login</a>
+        <a href="cart.html" class="text-decoration-none text-dark"><i class="fa-solid fa-cart-shopping"></i> Cart</a>      
+    </div>
+  </div>
+
+  <!-- 🌿 Header -->
+  <header class="py-3 border-bottom">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h2 class="text-success m-0">🌿 ELSE</h2>
+      <form class="d-flex w-50">
+        <input type="text" class="form-control me-2" placeholder="What do you need?" />
+      </form>
+      <div class="text-end">
+        <div><i class="fa-solid fa-cart-shopping"></i> $150.00</div>
+        <div class="small text-muted">📞 +254737731566 | Support 24/7</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 🌐 Navigation -->
+  <nav class="bg-success">
+    <div class="container">
+      <ul class="nav nav-pills py-2 justify-content-center">
+        <li class="nav-item"><a class="nav-link text-white active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="product-template.html">Product</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="shop.html">Shop</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 🖼️ Hero Section -->
+  <section class="hero-section text-white d-flex align-items-center" style="background: url('../images/hero.webp') center center/cover; height: 500px;">
+
+    <div class="container">
+      <div class="col-md-6">
+        <h1 class="display-4 fw-bold">FRESH FRUITS</h1>
+        <p class="lead">Vegetable 100% Organic</p>
+        <p>Free Pickup and Delivery Available</p>
+        <a href="shop.html" class="btn btn-success px-4 py-2">SHOP NOW</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🧭 Main Content -->
+  <section class="pt-5 pb-5">
+    <div class="container">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-lg-3">
+          <div class="bg-light p-3 border">
+            <h5 class="mb-3"><i class="fa-solid fa-bars me-2"></i>All Departments</h5>
+            <ul class="list-unstyled">
+              <li><a href="../images/freshmeat.jpeg" class="d-block py-2 text-dark">Fresh Meat</a></li>
+              <li><a href="../images/vegetable.jpeg" class="d-block py-2 text-dark">Vegetables</a></li>
+              <li><a href="../images/fruit&nut.jpg" class="d-block py-2 text-dark">Fruit & Nut Gifts</a></li>
+              <li><a href="../images/freshberries.jpeg" class="d-block py-2 text-dark">Fresh Berries</a></li>
+              <li><a href="../images/oceanfoods.jpg" class="d-block py-2 text-dark">Ocean Foods</a></li>
+              <li><a href="../images/buttereggs.jpeg" class="d-block py-2 text-dark">Butter & Eggs</a></li>
+              <li><a href="../images/fastfood.jpeg" class="d-block py-2 text-dark">Fastfood</a></li>
+              <li><a href="../images/freshonion.jpeg" class="d-block py-2 text-dark">Fresh Onion</a></li>
+              <li><a href="../images/papayacrisps.jpeg" class="d-block py-2 text-dark">Papaya & Crisps</a></li>
+              <li><a href="../images/oatmeal.jpeg" class="d-block py-2 text-dark">Oatmeal</a></li>
+              <li><a href="../images/freshbananas.jpeg" class="d-block py-2 text-dark">Fresh Bananas</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Product Grid + Filter -->
+        <div class="col-lg-9">
+          <!-- 🔍 Search Bar -->
+          <div class="mb-4">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search for products..." />
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4>Featured Products</h4>
+            <ul class="nav nav-pills">
+              <li class="nav-item"><a class="nav-link active" href="../images/all.jpg" data-filter="all">All</a></li>
+              <li class="nav-item"><a class="nav-link" href="../images/meat.jpeg" data-filter="Fresh Meat">Fresh Meat</a></li>
+              <li class="nav-item"><a class="nav-link" href="../images/vegetables.jpeg" data-filter="Vegetables">Vegetables</a></li>
+              <li class="nav-item"><a class="nav-link" href="../images/fastfood.jpeg" data-filter="Fastfood">Fastfood</a></li>
+            </ul>
+          </div>
+
+          <!-- 🧱 Product Cards -->
+          <a href="product-template.html?id=banana" class="btn btn-sm btn-success mt-2">View Details</a>
+
+          <a href="product-template.html">
+            <img src="../images/bananas.jpeg" class="card-img-top" alt="Organic Bananas">
+          </a>
+          
+          <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-4">
+              <div class="card h-100 text-center" data-category="Fresh Meat">
+                <img src="../images/freshmeat.jpeg" class="card-img-top" alt="Fresh Meat" />
+                <div class="card-body">
+                  <h5 class="card-title">Fresh Meat</h5>
+                  <p class="card-text text-success fw-bold">$30.00</p>
+                  <button class="btn btn-outline-success btn-sm">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4">
+              <div class="card h-100 text-center" data-category="Vegetables">
+                <img src="../images/bananas.jpeg" class="card-img-top" alt="Bananas" />
+                <div class="card-body">
+                  <h5 class="card-title">Organic Bananas</h5>
+                  <p class="card-text text-success fw-bold">$12.00</p>
+                  <button class="btn btn-outline-success btn-sm">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4">
+              <div class="card h-100 text-center" data-category="Fastfood">
+                <img src="../images/guava.jpeg" class="card-img-top" alt="Guava" />
+                <div class="card-body">
+                  <h5 class="card-title">Guava Juice</h5>
+                  <p class="card-text text-success fw-bold">$8.50</p>
+                  <button class="btn btn-outline-success btn-sm">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+            <!-- Card 4 -->
+<div class="col-md-4">
+  <div class="card h-100 text-center" data-category="Vegetables">
+    <img src="../images/tomato.jpeg" class="card-img-top" alt="Tomatoes" />
+    <div class="card-body">
+      <h5 class="card-title">Fresh Tomatoes</h5>
+      <p class="card-text text-success fw-bold">$6.00</p>
+      <button class="btn btn-outline-success btn-sm">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<!-- Card 5 -->
+<div class="col-md-4">
+  <div class="card h-100 text-center" data-category="Fastfood">
+    <img src="../images/burger.jpeg" class="card-img-top" alt="Burger" />
+    <div class="card-body">
+      <h5 class="card-title">Veggie Burger</h5>
+      <p class="card-text text-success fw-bold">$5.99</p>
+      <button class="btn btn-outline-success btn-sm">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<!-- Card 6 -->
+<div class="col-md-4">
+  <div class="card h-100 text-center" data-category="Fresh Meat">
+    <img src="../images/chicken.jpeg" class="card-img-top" alt="Chicken Breast" />
+    <div class="card-body">
+      <h5 class="card-title">Chicken Breast</h5>
+      <p class="card-text text-success fw-bold">$18.75</p>
+      <button class="btn btn-outline-success btn-sm">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<!-- Card 7 -->
+<div class="col-md-4">
+  <div class="card h-100 text-center" data-category="Vegetables">
+    <img src="../images/brocolli.jpeg" class="card-img-top" alt="Broccoli" />
+    <div class="card-body">
+      <h5 class="card-title">Organic Broccoli</h5>
+      <p class="card-text text-success fw-bold">$4.20</p>
+      <button class="btn btn-outline-success btn-sm">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<!-- Card 8 -->
+<div class="col-md-4">
+  <div class="card h-100 text-center" data-category="Fastfood">
+    <img src="../images/fries.jpeg" class="card-img-top" alt="Fries" />
+    <div class="card-body">
+      <h5 class="card-title">Sweet Potato Fries</h5>
+      <p class="card-text text-success fw-bold">$3.50</p>
+      <button class="btn btn-outline-success btn-sm">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<!-- Card 9 -->
+<div class="col-md-4">
+  <div class="card h-100 text-center" data-category="Fresh Meat">
+    <img src="../images/steak.jpeg" class="card-img-top" alt="Beef Steak" />
+    <div class="card-body">
+      <h5 class="card-title">Beef Steak</h5>
+      <p class="card-text text-success fw-bold">$25.00</p>
+      <button class="btn btn-outline-success btn-sm">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+            <!-- More cards here as needed... -->
+          </div>
+
+          <!-- 🛒 Cart Section -->
+         <!-- 🛒 Cart Sidebar -->
+<div id="cartSidebar" class="cart-sidebar">
+  <div class="cart-header d-flex justify-content-between align-items-center p-3 border-bottom bg-success text-white">
+    <h5 class="m-0">Your Cart</h5>
+    <button id="closeCart" class="btn btn-sm btn-light">✕</button>
+  </div>
+  <div id="cartItems" class="p-3 text-dark">
+    <p class="text-muted">Cart is empty.</p>
+  </div>
+  <div class="p-3 border-top bg-light d-flex justify-content-between align-items-center">
+    <strong>Total:</strong>
+    <span id="cartTotal" class="text-success fw-bold">$0.00</span>
+  </div>
+</div>
+
+<!-- 🛒 Checkout Modal -->
+<div id="checkoutModal" class="checkout-modal">
+  <div class="checkout-modal-content">
+    <h3>Checkout</h3>
+    <form id="checkoutForm">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+      </div>
+      <div class="mb-3">
+        <label for="address" class="form-label">Address</label>
+        <input type="text" id="address" class="form-control" placeholder="Your Address" required>
+      </div>
+      <div class="mb-3">
+        <label for="payment" class="form-label">Payment Method</label>
+        <select id="payment" class="form-select">
+          <option value="creditCard">Credit Card</option>
+          <option value="paypal">PayPal</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-success w-100">Complete Purchase</button>
+    </form>
+  </div>
+</div>
+<!-- 🔘 Floating Cart Button -->
+<button id="openCart" class="btn btn-success cart-toggle-btn">
+  🛒 Cart (<span id="cartCount">0</span>)
+</button>
+
+
+      <!-- Trust Banner with Icons -->
+<section class="trust-banner">
+  <div class="container text-center">
+    <div class="trust-content">
+      <h2 class="trust-title">Why Choose ELSE Organics?</h2>
+      <div class="trust-icons">
+        <div class="icon-item">
+          <img src="../images/organic.jpeg" alt="100% Organic">
+          <h3>100% Organic</h3>
+          <p>Our products are farm-fresh and pesticide-free.</p>
+        </div>
+        <div class="icon-item">
+          <img src="../images/ecofriendly.jpeg" alt="Eco-Friendly Packaging">
+          <h3>Eco-Friendly Packaging</h3>
+          <p>We care for the planet with sustainable packaging.</p>
+        </div>
+        <div class="icon-item">
+          <img src="../images/fastdelivery.jpeg" alt="Fast Delivery">
+          <h3>Fast Local Delivery</h3>
+          <p>Enjoy fresh produce delivered straight to your door.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- JS -->
+  <script src="../javascript/script.js"></script>
+  <script src="../javascript/products.js"></script>
+  <script src="../javascript/cart.js"></script>
+</body>
+</html>
+
